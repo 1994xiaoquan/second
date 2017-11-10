@@ -75,12 +75,12 @@
 	</dependency>
 	<dependency>
 		<groupId>cn.e3mall</groupId>
-		<artifactId>e3-manager-dao</artifactId>
+		<artifactId>e3-manager-interface</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</dependency>
 	<dependency>
 		<groupId>cn.e3mall</groupId>
-		<artifactId>e3-manager-interface</artifactId>
+		<artifactId>e3-content-interface</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</dependency>
 	<!-- dubbo 相关 -->
@@ -105,7 +105,6 @@
 		<artifactId>zkclient</artifactId>
 		<version>${zkclient.version}</version>
 	</dependency>
- 
    </dependencies>
     <build>
    	<plugins>

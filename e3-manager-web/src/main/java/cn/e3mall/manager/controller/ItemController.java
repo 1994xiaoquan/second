@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import cn.e3mall.manager.service.ItemService;
 import cn.e3mall.pojo.TbItem;
+import cn.e3mall.pojo.TbItemDesc;
+import cn.e3mall.utils.E3mallResult;
 
 @Controller
 public class ItemController {
@@ -26,6 +28,14 @@ public class ItemController {
 	@ResponseBody
 	public TbItem findItemById(@PathVariable Long itemId ){
 		return itemService.findItemById(itemId);
+	}
+	
+	//新增商品
+	@RequestMapping("/item/save")
+	@ResponseBody
+	public E3mallResult insertItem(TbItem tbitem, TbItemDesc itemdesc){
+		E3mallResult result = itemService.insertItem(tbitem, itemdesc);
+		return result;
 	}
 	
 }
